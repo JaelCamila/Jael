@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 5</title>
+</head>
+<script>
+function calculatePi() {
+            var iterations = parseInt(document.getElementById("iterations").value);
+            var resultElement = document.getElementById("out");
+            
+            if (isNaN(iterations) || iterations <= 0) {
+                resultElement.innerText = "Error: Ingrese un número de iteraciones válido mayor que 0.";
+                return;
+            }
+
+            var pi = 0;
+            for (let i = 0; i < iterations; i++) {
+                pi += Math.pow(-1, i) / (2 * i + 1);
+            }
+            pi *= 4;
+
+            resultElement.innerText = `Número de iteraciones: ${iterations}\nπ ≈ ${pi.toFixed(6)}`;
+        }
+</script>
+<body bgcolor="#CC99FF">
+  <p><a href="index.html">Regresa al menú</menu></a></p>  
+  Calcule el valor de π a partir de la siguiente serie infinita (Metodo de Gottfried Leibniz): <br>
+  π = 4 (1/1 -1 /3 + 1/5 -1/7 + 1/9 – 1/11 +…………) <br>
+    <label for="iterations">Ingrese el número de iteraciones:</label>
+    <input type="text" id="iterations"><br><br>
+    <input type="button" value="Calcular π" onclick="calculatePi()"><br><br>
+    <p id="out">Resultado:</p><br>
+</body>
+</html>

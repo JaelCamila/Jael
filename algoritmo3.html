@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html Lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+        <title>Algoritmo 3</title>
+    
+    <script>
+        function cubo() {
+           if (!isNaN(document.getElementById("num").value) && 1 < (document.getElementById("num").value)){
+            var naturales = parseInt(document.getElementById("num").value);
+            var resultado = "Resultado: <br>";
+            for (let i = 2; i <= naturales; i++) {
+                if (i % 2 == 0) {
+                    resultado += `${i} al cubo es ${i * i * i}<br>`;
+            }
+           }
+           document.getElementById("out").innerHTML = resultado;
+        } else {
+            document.getElementById("out").innerHTML = `Existe un error en el tipo de datos ingresados. <br> El valor debe ser númerico y mayor a 1`;
+        }
+    }
+           </script>
+        </head>
+
+    <body bgcolor= "#bbdefb"></body>
+    <p><a href="index.html">Regresa al menú</a><br></p>
+    Escribir un programa que muestre en pantalla los cinco primeros números naturales pares elevados al cubo.<br>
+Ejemplo: <br>
+2 al cubo es 8 <br>
+4 al cubo es 64 <br>
+6 al cubo es .. <br>
+8 al cubo es .. <br>
+100 al cubo es .. <br><br>
+Cantidad de números naturales pares: <input type="text" id="num" value="20"><br>
+<input type="button" value="Encontrar los primeros n números naturales" onclick="cubo()"><br>
+<img src= "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7f30abe9-b108-4bc0-914f-0ccc2d90df1e/dafi59p-f1464991-dbe1-448f-898e-0211e5697825.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdmMzBhYmU5LWIxMDgtNGJjMC05MTRmLTBjY2MyZDkwZGYxZVwvZGFmaTU5cC1mMTQ2NDk5MS1kYmUxLTQ0OGYtODk4ZS0wMjExZTU2OTc4MjUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kyLwgWsI2eZQ2NeG5gz_JMdPM8IpHTkwSPl1_eeWcM0" alt="" width="300" height="500">
+<p id="out">Resultado: </p>
+    </body>
+    </html>
