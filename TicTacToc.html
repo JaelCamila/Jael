@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f2; 
+}
+
+.imagen {
+    width: 100px;
+    height: 100px;
+}
+
+table {
+    background-image: url("./img/fondo1.jpg");
+    background-size: cover;
+    display: inline-table;
+    border: 2px solid #ff99cc; 
+}
+
+h1 {
+    display: inline;
+    color: #ff66b2; 
+    font-family: 'Arial', sans-serif;
+}
+
+input[type=button] {
+    font-size: larger;
+    background-color: #ffccdf; 
+    color: white;
+    border: 1px solid #ff99cc;
+    border-radius: 10px; 
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background-color: #ff99cc; 
+}
+
+#contador {
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #ff66b2; 
+}
+
+    </style>
+    <title>TicTacToc</title>
+    <script>
+        eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('p o=q;p s=0;r G(t){t.u=q;t.e=o?"A":"B";f.j("g").h=o?"g B":"g A";o=!o;s++;z()}r z(){l(s>=9){f.j("g").h="F"}p d=f.y("x[w=v]");l(d[0].e==d[1].e&&d[1].e==d[2].e&&d[0].e!=""){f.j("g").h="m "+d[0].e;k(0,1,2)}n l(d[3].e==d[4].e&&d[4].e==d[5].e&&d[3].e!=""){f.j("g").h="m "+d[3].e;k(3,4,5)}n l(d[6].e==d[7].e&&d[7].e==d[8].e&&d[6].e!=""){f.j("g").h="m "+d[6].e;k(6,7,8)}n l(d[0].e==d[3].e&&d[3].e==d[6].e&&d[0].e!=""){f.j("g").h="m "+d[0].e;k(0,3,6)}n l(d[1].e==d[4].e&&d[4].e==d[7].e&&d[1].e!=""){f.j("g").h="m "+d[1].e;k(1,4,7)}n l(d[2].e==d[5].e&&d[5].e==d[8].e&&d[2].e!=""){f.j("g").h="m "+d[2].e;k(2,5,8)}n l(d[0].e==d[4].e&&d[4].e==d[8].e&&d[0].e!=""){f.j("g").h="m "+d[0].e;k(0,4,8)}n l(d[2].e==d[4].e&&d[4].e==d[6].e&&d[2].e!=""){f.j("g").h="m "+d[2].e;k(2,4,6)}}r k(a,b,c){p d=f.y("x[w=v]");E(D i=0;i<d.C;i++){d[i].u=q}}',43,43,'|||||||||||||botones|value|document|turno|innerHTML||getElementById|Dali|if|Gana|else|control|var|true|function|contador|boton|disabled|button|type|input|querySelectorAll|Verificar|O|X|length|let|for|EMPATE|Chturn'.split('|'),0,{}))
+
+    </script>
+</head>
+<body>
+    <p><a href="index.html">Regresa al menú</a></p>
+    <table>
+        <tr>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+            <td><input type="button" value="" onclick="Chturn(this);"></td>
+        </tr>
+    </table>
+    <h1 id="turno">turno 0</h1>
+    <input type="submit" value="Reiniciar" onclick="location.reload();">
+</body>
+</html>
