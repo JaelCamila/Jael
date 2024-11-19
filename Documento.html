@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pila Genérica</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f3f4f6;
+        color: #333;
+        margin: 20px;
+        text-align: center;
+    }
+
+    h1 {
+        color: #4CAF50;
+    }
+
+    table {
+        margin: 20px auto;
+        border-collapse: collapse;
+        width: 50%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: white;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    input[type="text"] {
+        padding: 8px;
+        margin: 10px 5px;
+        width: 200px;
+    }
+
+    input[type="button"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    input[type="button"]:hover {
+        background-color: #45a049;
+    }
+
+    h3 {
+        margin-top: 20px;
+        color: #ff5722;
+    }
+</style>
+<script>
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('5 A=["1w","1v","1ué","1t","1s","1r","1q","1p","1o","1nña","1m","1l","1kín","1j","1i"];9 1h(){5 N=O.1g(O.1f()*A.1e);5 p=A[N];2.4("l").b=p;2.4("M").b=`z(${p})`;2.4("L").b=`u(${p})`}9 1d(){5 6=2.4("l").b;2.4("M").b=`z(${6})`;2.4("L").b=`u(${6})`}9 z(){5 6=2.4("l").b.F();g(6){2.4("8").7="";5 o=2.y("1c");5 x=2.y("K");5 w=2.y("K");x.c="m->";w.c=6;o.J(x);o.J(w);5 3=2.4("3");E.D(3.d).1b(i=>i.d[0].c="");3.1a(o,3.e)}v{2.4("8").7="f q 19 18 17í16."}}9 I(){5 3=2.4("3");g(3.h()){5 6=3.e.d[1].c;2.4("8").7=`H 15ó14 m:${6}`;3.13(3.e);g(3.e){3.e.d[0].c="m->"}}v{2.4("8").7="f t s 12 11 I."}}9 10(){5 3=2.4("3");g(3.h()){5 6=3.e.d[1].c;2.4("8").7=`Z Y m X k j Wá:${6}`}v{2.4("8").7="f t s r k j."}}9 G(){2.4("3").7="";2.4("8").7="H V G r k j."}9 u(){5 6=2.4("l").b.F();5 3=2.4("3");g(!3.h()){2.4("8").7="f t s r k j.";U}5 C=E.D(3.d).T(i=>i.d[1].c===6);2.4("8").7=C?"Sí q B.":"f q B."}9 R(){5 3=2.4("3");2.4("8").7=3.h()?"Q":"P"}',62,95,'||document|tabla|getElementById|const|texto|innerHTML|mensaje|function||value|textContent|children|firstChild|No|if|hasChildNodes|row|pila|la|Elemento|tope||renglon|palabra|se|en|elementos|hay|Find|else|celda2|celda1|createElement|Push|palabrasAleatorias|encuentra|encontrado|from|Array|trim|Clear|Se|Pop|appendChild|td|iFind|iPush|indice|Math|true|false|isEmpty||some|return|hizo|est|de|el|En|Peek|hacer|para|removeChild|del|elimin|as|vac|cadenas|aceptan|insertBefore|forEach|tr|CambioTexto|length|random|floor|Aleatorias|puente|arena|jard|luz|rio|monta|fuego|sombra|camino|ventana|guitarra|nube|caf|libro|sol'.split('|'),0,{}))
+
+</script>
+</head>
+<body onload="Aleatorias()">
+    <h1>Pila Genérica</h1>
+    <p>Desarrolle una aplicación que muestre un objeto tipo pila e implemente los métodos Push, Pop, Peek, Clear, Find, isEmpty.</p>
+    <br>
+    <label for="Elemento">Elemento:</label>
+    <input type="text" id="Elemento" onkeyup="CambioTexto()">
+    <input type="button" value="Push()" id="iPush" onclick="Push(); Aleatorias();">
+    <input type="button" value="Pop()" id="iPop" onclick="Pop()">
+    <input type="button" value="Peek()" id="iPeek" onclick="Peek()">
+    <input type="button" value="Clear()" id="iClear" onclick="Clear()">
+    <input type="button" value="Find()" id="iFind" onclick="Find()">
+    <input type="button" value="isEmpty()" id="iEmpty" onclick="isEmpty()">
+    <table>
+        <tbody id="tabla"></tbody>
+    </table>
+    <a href="index.html"><button>Regresar al menú</button></a><br>
+    <h3 id="mensaje"></h3>
+</body>
+</html>
