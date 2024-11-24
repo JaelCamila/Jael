@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación de Expresiones Postfijas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        #container {
+            width: 80%;
+            margin: auto;
+            margin-top: 5%;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            font-size: 1.2em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        button#btnEvaluar { background-color: #4CAF50; color: white; }
+        button#btnPaso { background-color: #2196F3; color: white; }
+        button#btnLimpiar { background-color: #f44336; color: white; }
+
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #resultado {
+            font-size: 1.5em;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Evaluación de Expresiones Postfijas</h1>
+        <input type="text" id="txtExpresion" placeholder="Ingrese una expresión postfija">
+        <div>
+            <button id="btnEvaluar">Evaluar</button>
+            <button id="btnPaso">Paso a Paso</button>
+            <button id="btnLimpiar">Limpiar</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Pila</th>
+                </tr>
+            </thead>
+            <tbody id="pila"></tbody>
+        </table>
+        <div id="resultado">Resultado: </div>
+    </div>
+
+    <script>
+       eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('j 3=[];j f=[];j g=0;5.7("1i").H("G",()=>{6 e=5.7("F").E.15();8(!e){m("14 13, 12 11 10ón Z vák.");o}1h{6 4=Y(e);5.7("4").s=`D:${4}`;C()}1g(16){m(16.1f)}});5.7("1e").H("G",()=>{6 e=5.7("F").E.15();8(!e){m("14 13, 12 11 10ón Z vák.");o}8(g===0){f=e.X(" ");3=[];5.7("3").B=""}8(g<f.h){6 9=f[g];8(!W(9)){3.u(V(9))}x{8(3.h<2){m("tón lák 1d 1c g 1b.");o}6 b=3.w();6 a=3.w();j 4;U(9){d"+":4=a+b;c;d"-":4=a-b;c;d"*":4=a*b;c;d"/":8(b===0)r q p("Tón S R.");4=a/b;c;Q:m(`P láO:${9}`);o}3.u(4)}g++;C()}x{8(3.h===1){5.7("4").s=`D:${3[0]}`}x{m("tón lák N M.")}}});5.7("1a").H("G",()=>{3=[];f=[];g=0;5.7("F").E="";5.7("3").B="";5.7("4").s="D: "});L Y(e){3=[];6 f=e.X(" ");K(6 9 19 f){8(!W(9)){3.u(V(9))}x{8(3.h<2){r q p("tón lák.")}6 b=3.w();6 a=3.w();j 4;U(9){d"+":4=a+b;c;d"-":4=a-b;c;d"*":4=a*b;c;d"/":8(b===0)r q p("Tón S R.");4=a/b;c;Q:r q p(`P láO:${9}`)}3.u(4)}}8(3.h!==1){r q p("tón lák N M.")}o 3[0]}L C(){6 z=5.7("3");z.B="";K(j i=3.h-1;i>=0;i--){6 y=5.J("18");6 A=5.J("17");A.s=3[i];y.I(A);z.I(y)}}',62,81,'|||pila|resultado|document|const|getElementById|if|elemento|||break|case|expresion|elementos|paso|length||let|lida|inv|alert||return|Error|new|throw|textContent|Expresi|push||pop|else|row|pilaHtml|cell|innerHTML|actualizarPila|Resultado|value|txtExpresion|click|addEventListener|appendChild|createElement|for|function|finalizar|al|lido|Operador|default|cero|entre|Divisi|switch|parseFloat|isNaN|split|evaluarPostfija|postfija|expresi|una|ingresa|favor|Por|trim|error|td|tr|of|btnLimpiar|actual|el|en|btnPaso|message|catch|try|btnEvaluar'.split('|'),0,{}))
+
+    </script>
+    <a href="index.html"><button>Regresar al menú</button></a><br>
+</body>
+</html>
