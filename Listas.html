@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #FFE4F3;
+            color: #4A4A4A;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #FF69B4;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            border: 2px solid #FFB6C1;
+            border-radius: 8px;
+            padding: 10px;
+            width: 200px;
+            font-size: 1em;
+            margin-right: 10px;
+            background-color: #FFF0F5;
+        }
+        input[type="button"] {
+            border: 2px solid #FF69B4;
+            border-radius: 8px;
+            padding: 10px 15px;
+            font-size: 1em;
+            color: #FFF;
+            background-color: #FF69B4;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #FF1493;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 60%;
+            background-color: #FFF0F5;
+        }
+        th, td {
+            border: 2px solid #FFB6C1;
+            padding: 10px;
+            text-align: center;
+            font-size: 1em;
+        }
+        th {
+            background-color: #FF69B4;
+            color: white;
+        }
+        td {
+            color: #4A4A4A;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mi Lista de Cosas</h1>
+    <div>
+        Elemento: 
+        <input type="text" id="Elemento" onkeyup="CambioTexto()">
+        <input type="button" value="Push()" id="pushh" onclick="pushElement()">
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Índice</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody id="tabla"></tbody>
+    </table>
+
+    <script>
+      eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('2 9=[];7 z(){2 a=0.1("6").3;y(a.x()!==""){9.w(a);0.1("6").3="";f()}v{u("t s r q p nío.")}}7 f(){2 4=0.1("4");4.e="";9.m((c,d)=>{2 8=0.l("k");8.e=`<5>${d}</5><5>${c}</5>`;4.j(8)})}7 i(){2 b=0.1("6").3;0.1("h").3=`g(${b})`}',36,36,'document|getElementById|let|value|tabla|td|Elemento|function|fila|lista|elemento|texto|valor|indice|innerHTML|actualizarTabla|Push|pushh|CambioTexto|appendChild|tr|createElement|forEach|vac||estar|puede|no|campo|El|alert|else|push|trim|if|pushElement'.split('|'),0,{}))
+
+    </script>
+     <a href="index.html"><button>Regresar al menú</button></a><br>
+</body>
+</html>
