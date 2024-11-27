@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrado César 2</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-color: #ffe4e1;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            background-color: #ffb6c1;
+            color: white;
+            padding: 20px;
+            border-radius: 0 0 20px 20px;
+            font-size: 2rem;
+            text-shadow: 2px 2px 2px #ff69b4;
+        }
+        #container {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            background: #fff0f5;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border: 2px solid #ffb6c1;
+        }
+        textarea, input {
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            border: 2px solid #ffb6c1;
+            border-radius: 10px;
+            resize: none;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 1rem;
+        }
+        textarea[readonly], input[readonly] {
+            background-color: #ffe4e1;
+            color: #555;
+            cursor: not-allowed;
+        }
+        .buttons {
+            margin: 15px 0;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 15px;
+            background-color: #ff69b4;
+            color: white;
+            border: 2px solid #ff1493;
+            border-radius: 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff1493;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>🌸 Cifrado César 🌸</h1>
+    <div id="container">
+        <textarea id="encryptedMessage" rows="6" readonly placeholder="🌺 Mensaje encriptado aparecerá aquí..."></textarea>
+        <label for="key" style="display: block; margin-top: 15px;">🔑 Llave:</label>
+        <input type="text" id="key" readonly placeholder="Llave cargada aparecerá aquí...">
+        <div class="buttons">
+            <button id="loadKey">💖 Cargar llave</button>
+            <button id="loadEncryptedMessage">💌 Cargar mensaje encriptado</button>
+            <button id="decrypt">🌟 Desencriptar</button>
+            <button id="saveDecryptedMessage">🎀 Guardar mensaje desencriptado</button>
+            <button id="clear">🧹 Limpiar</button>
+        </div>
+        <textarea id="decryptedMessage" rows="6" readonly placeholder="✨ Mensaje desencriptado aparecerá aquí..."></textarea>
+    </div>
+    <script>
+        (function () {
+            const encryptedMessageInput = document.getElementById("encryptedMessage");
+            const keyInput = document.getElementById("key");
+            const decryptedMessageInput = document.getElementById("decryptedMessage");
+
+            document.getElementById("loadKey").addEventListener("click", () => {
+                const key = prompt("Introduce la llave:");
+                if (key && !isNaN(key)) {
+                    keyInput.value = key.trim();
+                } else {
+                    alert("Por favor, introduce una llave válida (número entero).");
+                }
+            });
+
+            document.getElementById("loadEncryptedMessage").addEventListener("click", () => {
+                const message = prompt("Introduce el mensaje encriptado:");
+                if (message) {
+                    encryptedMessageInput.value = message.trim();
+                } else {
+                    alert("Por favor, introduce un mensaje válido.");
+                }
+            });
+
+            document.getElementById("decrypt").addEventListener("click", () => {
+                const encryptedMessage = encryptedMessageInput.value;
+                const key = parseInt(keyInput.value, 10);
+                if (!encryptedMessage || isNaN(key)) {
+                    alert("Por favor, asegúrate de haber cargado un mensaje y una llave válidos.");
+                    return;
+                }
+                decryptedMessageInput.value = decryptCesar(encryptedMessage, key);
+            });
+
+            document.getElementById("saveDecryptedMessage").addEventListener("click", () => {
+                const decryptedMessage = decryptedMessageInput.value;
+                if (!decryptedMessage) {
+                    alert("No hay un mensaje desencriptado para guardar.");
+                    return;
+                }
+                const blob = new Blob([decryptedMessage], { type: "text/plain" });
+                const link = document.createElement("a");
+                link.href = URL.createObjectURL(blob);
+                link.download = "mensaje_desencriptado.txt";
+                link.click();
+            });
+
+            document.getElementById("clear").addEventListener("click", () => {
+                encryptedMessageInput.value = "";
+                keyInput.value = "";
+                decryptedMessageInput.value = "";
+            });
+
+            function decryptCesar(text, key) {
+                return text.split("").map((char) => {
+                    if (/[a-zA-Z]/.test(char)) {
+                        const base = char.charCodeAt(0) >= 97 ? 97 : 65;
+                        return String.fromCharCode(((char.charCodeAt(0) - base - key + 26) % 26) + base);
+                    }
+                    return char;
+                }).join("");
+            }
+        })();
+    </script>
+      <a href="index.html"><button>Regresar al menú</button></a><br>
+</body>
+</html>
